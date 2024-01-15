@@ -21,13 +21,13 @@ let Jomblo = [
 	},
   ];
   
-  const menuSection = document.querySelector(".menu-section");
+  const menuSection = document.querySelector(".menu-section);
   
-  Jomblo.map((data) => {
-	menuSection.innerHTML += (data.name, data.desc, data.price, data.id);
+  .map(() => {
+	menuSection.innerHTML += (.name, .desc, .price, .id);
   });
   
-  function iniApa(name,desc,price,id) {
+  function iniApa() {
 	return `<div class="card">
 		  <button class="kategori" aria-readonly="true">Paket</button>
 		  <hr class="line" />
@@ -40,11 +40,11 @@ let Jomblo = [
 				  />
 			  </div>
 			  <div class="content">
-				  <p>${name}</p>
-				  <p>${desc}</p>
-				  <p>${price}</p>
+				  <p></p>
+				  <p></p>
+				  <p></p>
 				  <div class="content2">
-					  <button class="tambah" id="pesan${id}">pesan</button>
+					  <button class="tambah" id="pesan{id}">pesan</button>
 				  </div>
 			  </div>
 		  </div>
@@ -52,7 +52,6 @@ let Jomblo = [
 	  `;
   }
   
-  Jomblo.map((data) => {
-	pesan = document.getElementById(`pesan${id}`)
-	pesan.
+  .map((data) => {
+
   });
