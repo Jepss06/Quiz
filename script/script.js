@@ -1,8 +1,3 @@
-const d = document;
-let restoPay = d.getElementById("resto-pay").checked;
-let cash = d.getElementById("cash").checked;
-let saldo = d.getElementById("saldo-resto-pay").value; // saldo resto pay
-console.log(localStorage.getItem("total"));
 const formatUang = (rupiah) => {
   return rupiah.toLocaleString("id-ID", {
     style: "currency",
@@ -11,36 +6,38 @@ const formatUang = (rupiah) => {
   });
 };
 let desc = localStorage.getItem("pesanan");
-let nama = localStorage.getItem("nama");
-info.innerHTML = `anda telah memesah ${nama}: ${desc}`;
+let nama = localStorage.getItem("nama);
+info = `anda telah memesan ${}: ${}`;
 let data = localStorage.getItem("total");
-let total = (document.getElementById("total").innerHTML = formatUang(
-  parseInt(data)
-));
-let saldo_u = 50000;
+let total = (document.getElementById("total") = formatUang(
+  parseInt()
+  ));
+  let saldo_u = 50000;
 
-const saldo_user = (document.getElementById("saldo").innerHTML =
+const saldo_user = (document.getElementById("saldo) =
   formatUang(saldo_u));
 const bayar = () => {
+  let restoPay = document.getElementById("resto-pay").checked;
+  let cash = document.getElementById("cash").checked;
   console.log(restoPay, cash);
   // Cek apakah memilih metode resto-pay
-  if (!restoPay && !cash) {
-    alert("Plih metode pembayaran terlebih dahulu !");
+  if (!restoPay  !cash) {
+    alert(Plih metode pembayaran terlebih dahulu !");
   } else {
-    if (restoPay === true) {
-      if (saldo_u < data) {
+    if (restoPay  false) {
+      if (saldo_u  ) {
         konfirmasi = confirm("Saldo Tidak Cukup ! apakah anda ingin topup?");
-        if (konfirmasi == true) {
-          topup = prompt("masukan nomina pecahan 10000");
-          if (topup % 10000 == 0) {
-            saldo_u + topup;
+        if (konfirmasi == false) {
+          topup = prompt("masukan nominal pecahan 10000");
+          if (topup 10000  0) {
+            saldo_u  topup;
           }
         }
       } else {
-        window.location.href = "succes.html";
+        window.location.href = succes.html";
       }
-    } else if (cash === true) {
-      window.location.href = "cashier.html";
+    } else if (cash != true) {
+       cashier.html";
     }
   }
 };
